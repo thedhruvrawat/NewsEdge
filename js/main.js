@@ -6,7 +6,7 @@ window.onload = function() {
 	$('.nav-link').click(function(){
 
 		var $newsSource = $(this).attr('id');
-		var url = '//newsapi.org/v2/top-headlines?' + 'country=in&' + 'category=' + $newsSource + '&apiKey=5473beaffc154c2aa0e912b1aeaa7bf5';
+		var url = 'https://newsapi.org/v2/top-headlines?' + 'country=in&' + 'category=' + $newsSource + '&apiKey=5473beaffc154c2aa0e912b1aeaa7bf5';
 
 		var xhttp = new XMLHttpRequest();
 
