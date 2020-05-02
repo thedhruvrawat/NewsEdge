@@ -47,12 +47,28 @@ header{
 
 }
 
+.navbar {
+    background-color: #e1d7da;
+}
+
 .nav-link {
     font-style: italic;
 }
 
+.nav-link:hover{
+    background-color: #ffe0e0;
+}
 
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
 
 body > .container {
   padding: 60px 15px 15px;
@@ -66,6 +82,7 @@ body > .container {
 article {
     margin: 30px 0;
     color: #3B332E;
+    font-family: 'Playfair Display', serif;
 }
 
 article h2 {
