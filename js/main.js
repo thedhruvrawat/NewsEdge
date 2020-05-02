@@ -2,6 +2,16 @@
 window.onload = function() {
 
 	$('#content').text('Select a news category to see the top 20 stories');
+	function clock(){
+		var d = new Date();
+		var date = d.getDate();
+		var year = d.getFullYear();
+		var month = d.getMonth();
+		var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+		month = monthArr[month];
+		document.getElementById("date").innerHTML=month+' '+date+", "+year;
+	}
+	clock();
 
 	$('.nav-link').click(function(){
 
@@ -14,7 +24,7 @@ window.onload = function() {
 			if ( this.readyState == 4 && this.status == 200 ) {
 				var data = JSON.parse(xhttp.responseText).articles;
 				
-				console.log(data);
+				// console.log(data);
 
 				var articles = data.map(mapToArticle);
 				var contentDiv = document.getElementById('content');
@@ -38,7 +48,7 @@ window.onload = function() {
 		}
 
 	function formatTime(timestr) {
-		return timestr.substr(0, 10) + ' ' + timestr.substr(11, 5);
+		return 'Date: ' + timestr.substr(0, 10) + ' Time: ' + timestr.substr(11, 5);
 	}
 	
 		function createTemplate(articles) {
@@ -48,7 +58,7 @@ window.onload = function() {
 					<h2><a class="article-header" href="${article.url}">${article.title}</a></h2>
 					<div class="row">
 						<div class="col-md-4">
-							<img class="img-fluid rounded mb-3" src="${article.img}"  />
+							<img class="img-fluid mb-3" src="${article.img}"  />
 						</div>
 						<div class="col-md-8">
 							<p class="date">${formatTime(article.date)}</p>

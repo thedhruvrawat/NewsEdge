@@ -9,6 +9,8 @@ html {
 body {
   margin-bottom: 60px;
   font-size: 20px;
+  /* background-image: url('../assets/back.jpg'); */
+  /* background-size: cover; */
   background-color: #E1D7DA !important;
   font-family: 'Droid Serif', serif;
 }
@@ -31,10 +33,11 @@ header{
 
 
 .subhead{
-    /* border: 1.5px solid #000; */
-    padding: 15px 25px 15px 25px;
+    /* border-left: 5px solid #000; */
+    padding: 15px 40px 15px 40px;
     background-color: #eae1e1;
-
+    box-shadow: 5px 10px 18px #888888;
+    /* border-radius: 10px; */
 }
 
 .subhead1{
